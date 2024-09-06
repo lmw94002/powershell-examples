@@ -3,7 +3,7 @@
         Example of PowerShell Parameters
     .description
         Example of PowerShell Parameters and Parameter Validation
-     .link
+    .link
         https://github.com/lmw94002/powershell-examples
     .notes
         Validating inputs will help prevent unexpected outcomes in your script
@@ -12,4 +12,9 @@
         PS> .\Example_Parameters.ps1
 #>
 
-write-output "Hello World"
+param (
+    # This sets the FOO variable
+    [string]$foo
+)
+
+write-output "The FOO parameter is $foo"
