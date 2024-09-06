@@ -16,7 +16,7 @@
         PS> .\Example_CommentBasedHelp.ps1 
 #>
 
-parameter (
+param (
     [string]$foo
 )
 
