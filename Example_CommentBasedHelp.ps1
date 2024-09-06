@@ -4,7 +4,7 @@
     .description
         Example of Comment Based Help for PowerShell Scripting
     .parameter foo
-        Sets the FOO variable to the value of foo
+        Sets the FOO variable to the value specified
     .link
         https://github.com/lmw94002/powershell-examples
     .notes
