@@ -3,8 +3,8 @@
         Example of Comment Based Help
     .description
         Example of Comment Based Help for PowerShell Scripting
-    .parameter bar
-        Sets the FOO variable to the value of BAR
+    .parameter foo
+        Sets the FOO variable to the value of foo
     .link
         https://github.com/lmw94002/powershell-examples
     .notes
@@ -15,5 +15,9 @@
     .example
         PS> .\Example_CommentBasedHelp.ps1 
 #>
+
+parameter (
+    [string]$foo
+)
 
 write-output "Hello World"

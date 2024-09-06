@@ -12,4 +12,9 @@
         PS> .\Example_Parameters.ps1
 #>
 
-write-output "Hello World"
+param (
+    # Set the value of the myVar Variable
+    [string]$myVar
+)
+
+write-output "Variable myVar is set to: $myVar"
