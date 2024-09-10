@@ -1,8 +1,8 @@
 <#
     .synopsis
-        Example of Comment Based Help
+        Example of using REST API via Powershell
     .description
-        Example of Comment Based Help for PowerShell Scripting
+        Examples of using the Restful API calls with PowerShell
     .link
         https://github.com/lmw94002/powershell-examples
     .notes
