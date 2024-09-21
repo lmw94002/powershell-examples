@@ -2,7 +2,7 @@
     .synopsis
         Example of using Split and Join
     .description
-        Example of Split and Join usage in PowerShell
+        Examples of Split and Join usage in PowerShell
     .link
         https://github.com/lmw94002/powershell-examples
     .notes
@@ -13,4 +13,6 @@
         PS> .\Example_SplitJoin.ps1
 #>
 
-write-output "Hello World"
+$myIP = "192.168.100.100"
+$myLastOctet = $myIP.split('.')[3]
+write-output "The last octet of $myIP is $myLastOctet"
