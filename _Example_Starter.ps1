@@ -11,5 +11,8 @@
     .example
         PS> .\Example_Starter.ps1
 #>
+$myScriptStart = (get-date)
 
 write-output "Hello World"
+
+write-output "Script Runtime $((new-timespan -Start $myScriptStart -End (get-date)).TotalSeconds) seconds" 
