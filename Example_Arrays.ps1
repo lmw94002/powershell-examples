@@ -12,4 +12,31 @@
         PS> .\Example_Arrays.ps1
 #>
 
-write-output "Hello World"
+write-output "---------------------------------------------"
+write-output " . Checking an Array against an Array ."
+$myNames = @("Larry","John","mike","mo","bettyjo")
+$myChecks = @("larry","moe","curly","JO")
+
+write-output "My List of Names : $myNames"
+write-output "My Name Checklist (Full/Partial) : $myChecks"
+
+write-output "NOTE : -contains and -match are case insensitve"
+
+write-output " .. FOREACH - Exact Match .."
+foreach ($myName in $myNames) {
+    if ($myChecks -contains $myName) {
+        write-host "$myName found" -ForegroundColor Green
+    } else {
+        write-host "$myName not found" -ForegroundColor Red
+    }
+}
+
+write-output " .. FOREACH - Full or Partial Match .."
+foreach ($myName in $myNames) {
+    if ($myChecks.where({$myName -match $_},'First')) {
+        write-host "$myName found" -ForegroundColor Green
+    } else {
+        write-host "$myName not found" -ForegroundColor Red
+    }
+}
+

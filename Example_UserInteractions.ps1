@@ -16,6 +16,7 @@
 # IDEA : Prompt for User Input
 
 # IDEA : Get User Credentials
-$myCredential = get-credential -Message "Enter your Network Username and Password"
+Write-Output "You can capture a user/pwd with the get-credential commandlet."
+$myCredential = get-credential -Message "Enter your Username and Password"
 
 # IDEA : Create a Simple Menu
