@@ -23,6 +23,11 @@ write-output "Add $myTimeDate extension to backup files..."
 # Measuring the time to an Action
 measure-command { sleep 2 }
 
+# Converting a String to a DateTime object
+$myStartDay = [datetime]::parseexact('20231104','yyyyMMdd',$null)
+$myDays = (new-timespan -Start $myStartDay -End (get-date)).Days
+write-ouptput "It's been $myDays since 20231104."
+
 # Script Execution Time Calculation
 sleep 2
 write-output "Execution Time : $((New-Timespan -Start $myStart -End (get-date)).TotalSeconds) seconds"
