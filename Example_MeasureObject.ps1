@@ -12,4 +12,8 @@
         PS> .\Example_MeasureObject.ps1
 #>
 
+$myNames = @("Larry","Moe","Curly")
+$myNumbers = @(5,3,8,7,1)
+
+
 write-output "Hello World"

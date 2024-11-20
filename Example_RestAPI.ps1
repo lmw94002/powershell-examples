@@ -14,3 +14,12 @@
 
 write-output "Retrieving PowerShell RSS feed..."
 Invoke-RestMethod -Uri https://devblogs.microsoft.com/powershell/feed/ | Format-Table -Property Title, pubDate
+
+write-output "Getting the PowerState of a DELL Server via iDRAC..."
+# Define the iDRAC credentials and server details
+$idracUser = "root"
+$idracCred = get-credential -User $idracuser -Message "Enter iDRAC Password"
+$idracIP = "172.27.69.201"
+$idracURL = "https://$idracIP/redfish/v1/Systems/System.Embedded.1" 
+$idracResponse = Invoke-RestMethod -Uri $idracURL -Method Get -Credential $idracCred -SkipCertificateCheck
+Write-Host "$($myIDRAC.Name) Power State: $($idracResponse.PowerState)"
