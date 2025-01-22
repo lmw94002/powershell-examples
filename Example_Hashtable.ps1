@@ -12,4 +12,21 @@
         PS> .\Example_Hashtable.ps1
 #>
 
-write-output "Hello World"
+Write-Output "-- HASHTABLE --"
+$myhashtable = @{
+    "FirstName" = "John"
+    "LastName" = "Doe"
+    "Age" = "49"
+    "Sex" = "Male"
+}
+Write-Output $myhashtable
+
+# Ensure the key values print out in the specefic order
+Write-Output "-- ORDERED HASHTABLE --"
+$myhashtable = [ordered]@{
+    "FirstName" = "Jane"
+    "LastName" = "Doe"
+    "Age" = "50"
+    "Sex" = "Female"
+}
+Write-Output $myhashtable
